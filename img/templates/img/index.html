@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>upload image</title>
+</head>
+
+<body>
+
+    <form action="/img/addImg" method="GET" enctype="multipart/form-data">
+        {% csrf_token %}
+        File:
+        <input type="file" name="image">
+        <input type="submit" value="Upload">
+    </form>
+    <img src="{{store.img_file}}"/>
+
+</body>
+
+</html>

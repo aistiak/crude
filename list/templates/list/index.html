@@ -1,0 +1,11 @@
+<div>
+    {% if person_list %}
+    <input type="text"/><br>
+    <button><a href="/list/add.html">A D D</a></button>
+    <ul>
+        {% for person in person_list %}
+        <li > <a href="/list/detail/{{person.name}}"> {{person.name}}</a> </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
